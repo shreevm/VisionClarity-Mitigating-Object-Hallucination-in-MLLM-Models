@@ -106,6 +106,6 @@ The application is deployed using **Docker**, allowing for easy containerization
 2.  Run the Docker container:
    ```bash
     docker run -p 7860:7860 -p 8000:8000 visionclarity-app
-    ```
+   
 
 
