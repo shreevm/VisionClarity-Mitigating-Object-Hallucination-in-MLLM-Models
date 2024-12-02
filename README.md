@@ -80,7 +80,7 @@ Watch the video demonstration of VisionClarity, where we showcase:
 - The entire deployment process
 
 ### Link to Video Demo:
-[Link to Demo Video](path/to/video)
+[Link to Demo Video](video)
 
 ## Deployment Strategy
 
