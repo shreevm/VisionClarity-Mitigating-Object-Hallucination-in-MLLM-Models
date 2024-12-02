@@ -19,8 +19,7 @@ Contains the core system code for VisionClarity, including:
 ### `deployment/`
 Contains files for containerizing and deploying the application:
 - **Dockerfile**: The configuration file to build a Docker container for VisionClarity, enabling easy deployment in different environments.
-- **ci-cd-pipeline.yml**: Continuous integration/continuous deployment (CI/CD) configuration, automating the build and deployment process.
-
+  
 ### `monitoring/`
 Contains configuration files for performance monitoring:
 - **Prometheus.yml**: Configuration for Prometheus to scrape metrics from the application.
@@ -46,6 +45,13 @@ Contains a demo screencast showcasing the VisionClarity system in action, includ
       ```bash
       pip install -r requirements.txt
       ```
+
+    - **Download the pre-trained model** from Google Drive:
+      Since the model file is large, you can download it directly from Google Drive using the following link:  
+      [Download the model](https://drive.google.com/file/d/1Xrpo-fuwqbaeOnKht5V2DSTkPUGzNZUo/view?usp=sharing)
+
+      After downloading the model, move it to your project directory or specify the correct path in the code. The model is necessary for generating product descriptions accurately.
+
     - Run the system:
       ```bash
       python src/main.py
@@ -84,6 +90,20 @@ The application is deployed using **Docker**, allowing for easy containerization
 1. Build the Docker image:
    ```bash
    docker build -t visionclarity-app .
+   ```
+2.  Run the Docker container:
+   ```bash
+    docker run -p 7860:7860 -p 8000:8000 visionclarity-app
+    ```
 
+## Monitoring and Metrics
+We use Prometheus and Grafana for monitoring the performance of the VisionClarity application.
 
+Prometheus is used to scrape metrics from the application, such as request counts, latency, and system performance.
+Grafana is used to visualize the metrics collected by Prometheus. The Grafana dashboard can be accessed at http://localhost:3000.
+Monitoring Setup in Docker
+To enable Prometheus and Grafana for monitoring, please refer to the docker-compose.yml and prometheus.yml files in the monitoring/ folder.
 
+### Project Documentation
+AI System Project Proposal
+Project Report 
