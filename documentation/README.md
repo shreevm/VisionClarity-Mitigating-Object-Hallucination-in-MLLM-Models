@@ -69,6 +69,18 @@ Contains a demo screencast showcasing the VisionClarity system in action, includ
       ```
 
     This will expose the application at `http://localhost:7860`.
+   
+3. Monitoring and Metrics
+We use Prometheus and Grafana for monitoring the performance of the VisionClarity application.
+
+Prometheus is used to scrape metrics from the application, such as request counts, latency, and system performance.
+Grafana is used to visualize the metrics collected by Prometheus. The Grafana dashboard can be accessed at http://localhost:3000.
+Monitoring Setup in Docker
+To enable Prometheus and Grafana for monitoring, please refer to the docker-compose.yml and prometheus.yml files in the monitoring/ folder.
+
+4.Project Documentation
+AI System Project Proposal
+Project Report 
 
 ## Video Demonstration
 
@@ -96,14 +108,4 @@ The application is deployed using **Docker**, allowing for easy containerization
     docker run -p 7860:7860 -p 8000:8000 visionclarity-app
     ```
 
-## Monitoring and Metrics
-We use Prometheus and Grafana for monitoring the performance of the VisionClarity application.
 
-Prometheus is used to scrape metrics from the application, such as request counts, latency, and system performance.
-Grafana is used to visualize the metrics collected by Prometheus. The Grafana dashboard can be accessed at http://localhost:3000.
-Monitoring Setup in Docker
-To enable Prometheus and Grafana for monitoring, please refer to the docker-compose.yml and prometheus.yml files in the monitoring/ folder.
-
-### Project Documentation
-AI System Project Proposal
-Project Report 
